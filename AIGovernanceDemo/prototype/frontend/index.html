@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>AI Governance Prototype UI</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>AI Governance & Decision Prototype</h1>
+
+      <section class="token-box">
+        <label for="tokenInput">Auth token</label>
+        <input id="tokenInput" type="text" value="analyst-token" />
+      </section>
+
+      <section class="panel">
+        <h2>Event Graph</h2>
+        <div class="graph-canvas" id="graphCanvas">
+          <div class="node source" data-node="source">
+            <div class="node-title">Customer Event</div>
+            <div class="node-subtitle">card_application</div>
+          </div>
+          <div class="node guard" data-node="guard">
+            <div class="node-title">PII Guard</div>
+            <div class="node-subtitle">PAN / email / income</div>
+          </div>
+          <div class="node policy" data-node="policy">
+            <div class="node-title">Policy Engine</div>
+            <div class="node-subtitle">consent + destination</div>
+          </div>
+          <div class="node model" data-node="model">
+            <div class="node-title">Model Score</div>
+            <div class="node-subtitle">propensity 0.87</div>
+          </div>
+          <div class="node decision" data-node="decision">
+            <div class="node-title">Decision</div>
+            <div class="node-subtitle">mask / allow / block</div>
+          </div>
+        </div>
+
+        <div id="nodeDetails" class="node-details">
+          <strong>Selected step:</strong> Customer Event
+          <div class="detail-body">Event enters the CDP and is evaluated for policy, quality, and risk.</div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Submit Event</h2>
+        <textarea id="eventInput" rows="8">{"event":"card_application","user_id":"12345","email":"akhil@example.com","income":2500000,"pan":"ABCDE1234F","card_type":"premium"}</textarea>
+        <div><button id="submitEvent">Ingest Event</button></div>
+        <pre id="ingestResult"></pre>
+      </section>
+
+      <section class="panel">
+        <h2>Request Decision</h2>
+        <textarea id="decisionInput" rows="7">{"request_id":"r1","event":{"event":"card_application","user_id":"12345","email":"akhil@example.com","income":2500000,"pan":"ABCDE1234F","premium_card_propensity":0.87},"context":{"destination":"google_ads"}}</textarea>
+        <div><button id="requestDecision">Get Decision</button></div>
+        <pre id="decisionResult"></pre>
+      </section>
+
+      <section class="panel">
+        <h2>Audit Log</h2>
+        <button id="listAudits">List Audits</button>
+        <pre id="auditList"></pre>
+      </section>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
