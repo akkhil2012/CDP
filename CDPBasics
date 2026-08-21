@@ -24,3 +24,15 @@ https://www.twilio.com/en-us/changelog/2025/liquid-functions-support-in-destinat
 
 
 CDP SDK >> AI usecases for mobile app ?
+
+| Term                     | Definition                                                     | Example                                                          |
+| ------------------------ | -------------------------------------------------------------- | ---------------------------------------------------------------- |
+| **Data Unification**     | Combining customer information from different sources.         | CRM + app + website + transactions → one profile.                |
+| **Profile Unification**  | Creating a consolidated customer profile.                      | One profile contains customer attributes and behavioral history. |
+| **Schema Mapping**       | Mapping fields from different systems into a common structure. | `cust_no` → `customer_id`.                                       |
+| **Normalization**        | Converting data into a consistent format.                      | `+91-9876543210` and `09876543210` → same standardized phone.    |
+| **Deduplication**        | Removing duplicate customer records.                           | Three records for the same customer become one.                  |
+| **Data Standardization** | Making values consistent across sources.                       | `India`, `IND`, `IN` → `IN`.                                     |
+| **Data Enrichment**      | Adding additional information to a customer profile.           | Add loyalty tier or external demographic information.            |
+| **Attribute**            | Individual piece of information about a customer.              | Age, city, income band, loyalty tier.                            |
+| **Profile**              | Collection of customer attributes and events.                  | Complete customer 360 record.                                    |
