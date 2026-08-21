@@ -36,3 +36,28 @@ CDP SDK >> AI usecases for mobile app ?
 | **Data Enrichment**      | Adding additional information to a customer profile.           | Add loyalty tier or external demographic information.            |
 | **Attribute**            | Individual piece of information about a customer.              | Age, city, income band, loyalty tier.                            |
 | **Profile**              | Collection of customer attributes and events.                  | Complete customer 360 record.                                    |
+
+
+
+terms to understand:
+Master these 10 first:
+
+Customer 360
+
+Identity Resolution
+
+Identity Graph
+
+Real-Time Event Streaming
+
+Unified Customer Profile
+
+Segmentation
+
+Activation
+
+Journey Orchestration
+
+Consent & Privacy
+
+AI/Next-Best-Action Decisioning
